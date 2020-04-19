@@ -64,19 +64,6 @@ class App extends Component {
               return <Person name={person.name} 
                              age={person.age}/>
             })}
-            {/* <Person
-              name={this.state.persons[0].name} 
-              age ={this.state.persons[0].age}/>
-            
-            <Person 
-              name={this.state.persons[1].name} 
-              age ={this.state.persons[1].age}
-              click={this.switchNameHandler.bind(this, 'Anil Skaria')}
-              changed={this.nameChangedHandler}> My Hobbies : racing</Person>
-            
-            <Person 
-              name={this.state.persons[2].name} 
-              age ={this.state.persons[2].age}/> */}
           </div>
         );
     }
