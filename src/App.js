@@ -5,17 +5,17 @@ import styled from 'styled-components';
 // import Radium, {StyleRoot} from 'radium';
 
 
-const StyledButton = styled.button`
-      background-color: ${props => props.alt ? 'red' : 'aquamarine'};
-      color: black;
-      font: inherit;
-      padding: 8px;
-      cursor: pointer;
+// const StyledButton = styled.button`
+//       background-color: ${props => props.alt ? 'red' : 'aquamarine'};
+//       color: black;
+//       font: inherit;
+//       padding: 8px;
+//       cursor: pointer;
 
-      &:hover{
-        background-color: ${props => props.alt ? 'orange' : 'lightgreen'};
-        color: white;
-      }`;
+//       &:hover{
+//         background-color: ${props => props.alt ? 'orange' : 'lightgreen'};
+//         color: white;
+//       }`;
 
 class App extends Component {
 
@@ -115,9 +115,9 @@ class App extends Component {
         <h1>Hi, I'm a react app !!!</h1>
         <p className={classes.join(' ')}>This is working ....</p>
 
-        <StyledButton alt={this.state.showPersons} onClick={this.togglePersonsHandler}>
+        <button className="button" onClick={this.togglePersonsHandler}>
           Toggle persons
-        </StyledButton>
+        </button>
         {persons}
       </div>
 
