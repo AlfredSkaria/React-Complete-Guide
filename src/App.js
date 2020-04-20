@@ -3,7 +3,6 @@ import './App.css';
 import Person from './Person/Person';
 import classes from './App.css'
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
-import { prependOnceListener } from 'cluster';
 // import styled from 'styled-components';
 // import Radium, {StyleRoot} from 'radium';
 
