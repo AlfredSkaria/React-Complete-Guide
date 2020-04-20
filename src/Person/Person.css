@@ -1,5 +1,5 @@
 .Person{
-    width: 30%;
+    width: 60%;
     margin: 16px  auto;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
@@ -7,3 +7,9 @@
     text-align: center;
     background-color: #f0f8ff;
 }
+
+/* @media(min-width: 500px) {
+    .Person{
+        width: 450px;
+    }
+} */
