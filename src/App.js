@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import styled from 'styled-components';
+import classes from './App.css'
+// import styled from 'styled-components';
 // import Radium, {StyleRoot} from 'radium';
 
-
-// const StyledButton = styled.button`
-//       background-color: ${props => props.alt ? 'red' : 'aquamarine'};
-//       color: black;
-//       font: inherit;
-//       padding: 8px;
-//       cursor: pointer;
-
-//       &:hover{
-//         background-color: ${props => props.alt ? 'orange' : 'lightgreen'};
-//         color: white;
-//       }`;
 
 class App extends Component {
 
@@ -64,19 +53,8 @@ class App extends Component {
 
   render() {
 
-    // const style = {
-    //   backgroundColor: '#7fffd4',
-    //   color: 'black',
-    //   font: 'inherit',
-    //   padding: '8px',
-    //   cursor: 'pointer',
-    //   ':hover':{
-    //     backgroundColor: 'lightgreen',
-    //     color: 'white'
-    //   }
-    // };
-
     let persons = null;
+    let btnClass = [classes.Button];
 
     if (this.state.showPersons) {
         persons = (
@@ -92,30 +70,26 @@ class App extends Component {
           </div>
         );
 
-        // style.backgroundColor='red';
-        // style[':hover'] = {
-        //   backgroundColor: 'orange',
-        //   color: 'white'
-        // }
+        btnClass.push(classes.Red);
     }
 
 
-    const classes = [];
+    const assignedClasses = [];
 
     if(this.state.persons.length <=2 ){
-      classes.push('red'); // classes will be red
+      assignedClasses.push(classes.red); // assignedClasses will be red
     }
 
     if(this.state.persons.length <=1){
-      classes.push('bold'); //classess = ['red','bold']
+      assignedClasses.push(classes.bold); //assignedClassess = ['red','bold']
     }
 
     return (
-      <div className="App">
+      <div className={classes.App}>
         <h1>Hi, I'm a react app !!!</h1>
-        <p className={classes.join(' ')}>This is working ....</p>
+        <p className={assignedClasses.join(' ')}>This is working ....</p>
 
-        <button className="button" onClick={this.togglePersonsHandler}>
+        <button className={btnClass.join(' ')} onClick={this.togglePersonsHandler}>
           Toggle persons
         </button>
         {persons}
